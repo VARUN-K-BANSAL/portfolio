@@ -11,6 +11,27 @@ body {
     background-color: black;
 }
 
+@media (min-height: 700px){
+    #bg{
+        height: 80%;
+    }
+
+    .profile h1{
+        margin-top: 0;
+    }
+}
+
+@media (max-width: 1240px){
+    .profile .images .skills , .tools{
+        width: 50%;
+        margin: 0;
+        padding: 0;
+    }
+    .nav_bar .li_nav_icon{
+        display: initial;
+    }
+}
+
 * {
     color: #fff;
     text-decoration: none;
@@ -57,6 +78,28 @@ body {
 }
 
 .nav_bar .li_nav_bar a:hover {
+    padding: 15px 20px;
+    background-color: white;
+    color: black;
+    opacity: .6;
+    text-shadow: 0 0 15px black;
+}
+
+.nav_bar .li_nav_icon {
+    float: right;
+    height: 30px;
+    width: 120px;
+    font-size: 22px;
+    text-align: center;
+    padding: 10px;
+    display: none;
+}
+
+.nav_bar .li_nav_icon a {
+    text-decoration: none;
+}
+
+.nav_bar .li_nav_icon a:hover {
     padding: 15px 20px;
     background-color: white;
     color: black;
@@ -174,12 +217,12 @@ body {
     text-align: left;
 }
 .profile h1{
+    margin-top: 15rem;
     color: black;
     font-weight: bolder;
 }
 
 .foot p{
-    font-size: small;
     text-align: left;
     float: left;
     color: black;
@@ -191,7 +234,7 @@ body {
     float: left;
     width: 38rem;
     height: 30rem;
-    border-right: 2px solid black;
+    /* border-right: 2px solid black; */
 }
 
 .profile .images .tools{
