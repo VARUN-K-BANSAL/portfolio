@@ -11,7 +11,10 @@
     </link>
 </head>
 
-<body>
+<body onload="preloaderFunction()">
+
+    <div id="preloader"></div>
+
     <div id="bg"></div>
 
     <div id="ProgressBar"></div>
@@ -73,6 +76,14 @@
             Mail -- Varunbansal326@gmail.com</p>
     </footer>
 
+    <!-- javascript for preloader starts -->
+    <script type="text/javascript">
+        var preload = document.getElementById('preloader');
+        function preloaderFunction() {
+            preload.style.display = none;
+        }
+    </script>
+    <!-- javascript for preloader ends-->
 
     <!-- javascript for particles background starts -->
     <script async type="text/javascript" src="javascript/particles.min.js"></script>
