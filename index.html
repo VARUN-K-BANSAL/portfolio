@@ -11,7 +11,7 @@
     </link>
 </head>
 
-<body onload="preloaderFunction()">
+<body>
 
     <div id="preloader"></div>
 
@@ -79,9 +79,9 @@
     <!-- javascript for preloader starts -->
     <script type="text/javascript">
         var preload = document.getElementById('preloader');
-        function preloaderFunction() {
-            preload.style.display = none;
-        }
+        window.addEventListener("load" , function(){
+            preload.style.display = "none";
+        })
     </script>
     <!-- javascript for preloader ends-->
 
