@@ -269,7 +269,7 @@ section {
     background: linear-gradient(45deg,#55e7fc, #0162c8);
 }
 
-.card:hover {
+.card_container:hover .card {
     transform: rotateY(180deg);
 }
 
