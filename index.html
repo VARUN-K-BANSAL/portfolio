@@ -2,40 +2,37 @@
 <html>
 
 <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Portfolio Varun</title>
-    <!-- <link rel="icon" href="logo for portfolio.png" type="image/x-icon"> -->
-    <!-- <link async rel="icon" href="Images/img.jpg" type="image/x-icon"> -->
-    <!-- font awesome icons path -->
+
+    <!-- fontawesome icons cdn -->
     <link async rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <!-- main CSS -->
     <link async rel="stylesheet" href="CSS/main.css">
 </head>
 
 <body>
-
-    <!-- <div id="preloader"></div> -->
-
-    <!-- <h1 class="mobile-version">Sorry, This website is for Desktops only</h1> -->
-    <!-- <div id="ProgressBar"></div>
-    <div id="ScrollPath"></div> -->
-
     <!-- top navigation bar menu starts-->
     <header>
         <a href="#landing_page" class="name">Varun Kumar Bansal</a>
+        <div class="toggle" onclick="toggleMenu()"></div>
         <ul class="nav_bar">
-            <li class="li_nav_bar"><a href="#profile_section">About Me</a></li>
-            <li class="li_nav_bar"><a href="#skills">Skills</a></li>
-            <li class="li_nav_bar"><a href="#experience">Experience</a></li>
+            <li class="li_nav_bar"><a href="#profile_section" onclick="toggleMenu()">About Me</a></li>
+            <li class="li_nav_bar"><a href="#skills" onclick="toggleMenu()">Skills</a></li>
+            <li class="li_nav_bar"><a href="#experience" onclick="toggleMenu()">Experience</a></li>
             <li class="li_nav_bar"><a
                     href="https://drive.google.com/file/d/1itqKZl2xKioEdFnoR1EHOQxZG4q_NpKo/view?usp=sharing"
-                    target="_blank">Resume</a></li>
-            <li class="li_nav_bar"><a href="#contact">Contact</a></li>
+                    target="_blank" onclick="toggleMenu()">Resume</a></li>
+            <li class="li_nav_bar"><a href="#contact" onclick="toggleMenu()">Contact</a></li>
         </ul>
     </header>
     <!-- top navigation bar menu ends-->
 
     <section class="first_section" id="landing_page">
-        <div id="bg"></div>
+        <div id="particles-js"></div>
         <!-- main typewriting starts-->
         <div class="main">
             <h1>I am
@@ -66,13 +63,29 @@
 
     <section class="third_section" id="skills">
         <h1><b>What I can do?</b></h1>
-        <div class="skills_contents">
-            <p>Programming in C/C++</p>
-            <p>Data Structures and Algorithms</p>
-            <p>Object Oriented Programming</p>
-            <p>Front-end Web Development</p>
-            <p>Programming in Java</p>
-            <p>Programming in Python</p>
+        <div class="skills_row">
+            <div class="skills_card_container">
+                <div class="skills_card tech_stacks">
+                    <h2>How I talk to computer</h2>
+                    <ul>
+                        <li>Using C / C++ Language</li>
+                        <li>Using Java Language</li>
+                        <li>Using JavaScript Language</li>
+                        <li>Using Python Language</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="skills_card_container">
+                <div class="skills_card industry_knowledge">
+                    <h2>Industry Knowledge</h2>
+                    <ul>
+                        <li>Data Structures and Algorithms</li>
+                        <li>Object Oriented Designing</li>
+                        <li>Problem Solving</li>
+                        <li>Front-end web development</li>
+                    </ul>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -87,13 +100,14 @@
                             <p>GWOC</p>
                         </div>
                         <div class="card_back">
-                            <h3><br>Open Source Contributor in Girlscript Winter Of Contributing</h3>
-                            <p>World's largest multilingual repository for programming contents</p><br>
-                            <a href="https://github.com/VARUN-K-BANSAL/winter-of-contributing" target="_blank">My Contibutions</a>
+                            <h3>Open Source Contributor in Girlscript Winter Of Contributing</h3>
+                            <p>GWOC is a three month long program organised by GirlScript Foundation to create world's largest multilingual content repository</p><br>
+                            <a href="https://github.com/VARUN-K-BANSAL/winter-of-contributing" target="_blank">My
+                                Contibutions</a>
                         </div>
                     </div>
                 </div>
-        
+
                 <div class="card_container">
                     <div class="card" id="gwoc_card">
                         <div class="card_front">
@@ -103,7 +117,8 @@
                         <div class="card_back">
                             <h3><br><br>Founder and admin of Code With Varun</h3>
                             <p> a YouTube channel for programming</p><br>
-                            <a href="https://www.youtube.com/channel/UCOKSg34Y2JEvCphJ8jFyajQ" target="_blank">Visit Channel</a>
+                            <a href="https://www.youtube.com/channel/UCOKSg34Y2JEvCphJ8jFyajQ" target="_blank">Visit
+                                Channel</a>
                         </div>
                     </div>
                 </div>
@@ -119,11 +134,12 @@
                         <div class="card_back">
                             <h3><br>Core Member in Google Developer Student Club of IIIT Sri City</h3>
                             <p>Club that is directly handled by Google</p><br>
-                            <a href="https://gdsc.community.dev/indian-institute-of-information-technology-sri-city/" target="_blank">GDSC IIIT Sri City</a>
+                            <a href="https://gdsc.community.dev/indian-institute-of-information-technology-sri-city/"
+                                target="_blank">GDSC IIIT Sri City</a>
                         </div>
                     </div>
                 </div>
-        
+
                 <div class="card_container">
                     <div class="card" id="gwoc_card">
                         <div class="card_front">
@@ -138,6 +154,35 @@
                     </div>
                 </div>
             </div>
+
+            <div class="card_row">
+                <div class="card_container">
+                    <div class="card" id="coding_ninjas_card">
+                        <div class="card_front">
+                            <img src="Images/coding_ninjas.jfif" class="logo" style="padding: 10px;">
+                            <p>Ninja Entrepreneur</p>
+                        </div>
+                        <div class="card_back">
+                            <h3><br><br>Ninja Entrepreneur at Coding Ninjas</h3>
+                            <p>Ninja Entrepreneur is a 6 month long internship program in which we will the face of coding ninjas in our Institute</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card_container">
+                    <div class="card" id="project_card">
+                        <div class="card_front">
+                            <img src="Images/covid_tracker.png" class="logo" style="padding: 20px;">
+                            <p>Project</p>
+                        </div>
+                        <div class="card_back">
+                            <h3><br>COVID19-India</h3>
+                            <p>Developed a website which shows the current status of COVID-19 in India using API calls</p><br><br>
+                            <a href="https://varun-k-bansal.github.io/covid19-India/" target="_blank">Visit Website</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -148,18 +193,24 @@
         <div class="icons">
             <ul>
                 <li><a href="https://github.com/VARUN-K-BANSAL" target="_blank"><i class="fab fa-github"></i></a></li>
-                <li><a href="https://www.linkedin.com/in/varun-bansal-819aab200/" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
-                <li><a href="https://www.codechef.com/users/varun2610" target="_blank"><i class="fas fa-code"></i></a></li>
-                <li><a href="https://www.facebook.com/profile.php?id=100071776040703" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
-                <li><a href="https://twitter.com/VarunBa36395647" target="_blank"><i class="fab fa-twitter"></i></a></li>
-                <li><a href="https://www.instagram.com/varun_bansal_21/" target="_blank"><i class="fab fa-instagram"></i></a></li>
-                <li><a href="https://www.youtube.com/channel/UCOKSg34Y2JEvCphJ8jFyajQ" target="_blank"><i class="fab fa-youtube"></i></a></li>
+                <li><a href="https://www.linkedin.com/in/varun-bansal-819aab200/" target="_blank"><i
+                            class="fab fa-linkedin-in"></i></a></li>
+                <li><a href="https://www.codechef.com/users/varun2610" target="_blank"><i class="fas fa-code"></i></a>
+                </li>
+                <li><a href="https://www.facebook.com/profile.php?id=100071776040703" target="_blank"><i
+                            class="fab fa-facebook-f"></i></a></li>
+                <li><a href="https://twitter.com/VarunBa36395647" target="_blank"><i class="fab fa-twitter"></i></a>
+                </li>
+                <li><a href="https://www.instagram.com/varun_bansal_21/" target="_blank"><i
+                            class="fab fa-instagram"></i></a></li>
+                <li><a href="https://www.youtube.com/channel/UCOKSg34Y2JEvCphJ8jFyajQ" target="_blank"><i
+                            class="fab fa-youtube"></i></a></li>
             </ul>
         </div>
     </section>
 
     <footer class="foot" id="contact">
-        <p>&copy; 2021, Varun Kumar Bansal, All Rights reserved</p>
+        <p>&copy; 2021, Varun Kumar Bansal, All Rights reserved (under construction)</p>
     </footer>
 
 
@@ -169,6 +220,14 @@
             let header = document.querySelector("header");
             header.classList.toggle("sticky", window.scrollY > 0);
         });
+
+        function toggleMenu() {
+            let menuToggle = document.querySelector(".toggle");
+            let navBar = document.querySelector(".nav_bar");
+
+            menuToggle.classList.toggle("active");
+            navBar.classList.toggle("active");
+        }
     </script>
     <!-- javascript for Sticky nav bar ends-->
 

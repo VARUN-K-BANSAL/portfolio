@@ -26,7 +26,7 @@ body {
     width: 0;
 }
 
-#bg {
+#particles-js {
     background-color: var(--loading_page);
     position: absolute;
     top: 0;
@@ -168,28 +168,55 @@ section {
     text-align: left;
 }
 
+.third_section {
+    background-color: rgb(22, 19, 44);
+}
+
 .third_section h1 {
     font-size: 40px;
+    color: var(--light_text);
 }
 
-.skills_contents {
-    margin-top: 40px;
-    display: inline-block;
-    align-items: left;
+.skills_card {
+    padding: 30px;
 }
 
-.skills_contents p {
+.skills_row {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 70px;
+}
+
+.skills_card h2 {
+    font-size: 30px;
+}
+
+.skills_card ul{
+    list-style: none;
+}
+
+.skills_card ul li {
+    padding: 20px;
     font-size: 20px;
-    font-weight: 600;
-    margin: 20px;
-    padding: 15px;
-    border-radius: 5%;
-    float: left;
 }
 
-/* .skills_contents p:nth-child(1) {
-    background-color: #0162c8;
-} */
+.tech_stacks {
+    background-color: var(--light_text);
+}
+
+.industry_knowledge {
+    background-color: rgb(6, 35, 79);
+}
+
+.industry_knowledge h2 {
+    color: var(--light_text);
+}
+
+.industry_knowledge ul {
+    color: var(--light_text);
+}
 
 .fourth_section h1 {
     font-size: 40px;
@@ -369,4 +396,49 @@ section {
     float: center;
     color: var(--light_text);
     width: 100%;
+}
+
+
+@media (max-width: 940px) {
+    header, header.sticky {
+        padding: 5px 30px;
+    }
+    header .nav_bar {
+        display: none;
+    }
+    header .nav_bar {
+        position: fixed;
+        display: block;
+        background-color: #fff;
+        top: 75px;
+        /* left: -100%; */
+        padding: 100px 50px;
+        width: 100%;
+        height: 100vh;
+        text-align: center;
+        border-top: 1px solid --loading_page;
+        transition: 0.5s;
+    }
+    header .menu.active {
+        position: fixed;
+        background-color: #fff;
+        display: block;
+        top: 75px;
+        left: 0;
+        padding: 100px 50px;
+        width: 100%;
+        height: 100vh;
+        text-align: center;
+    }
+    header ul li a{
+        font-size: 20px;
+        color: #000;
+        font-weight: 400;
+        margin: 10px 0;
+    }
+
+    .toggle {
+        width: 40px;
+        height: 40px;
+    }
 }
