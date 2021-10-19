@@ -231,7 +231,7 @@
 
     <!-- preloader js starts -->
     <script>
-        $(document).ready(function () {
+        $(window).on('load', function () {
             fadeOutTime = 500;
             function removeLoader() {
                 let preloader = $('.spinner-wrapper');
