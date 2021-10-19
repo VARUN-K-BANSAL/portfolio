@@ -8,6 +8,9 @@
 
     <title>Portfolio Varun</title>
 
+    <!-- jQuery cdn -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
     <!-- fontawesome icons cdn -->
     <link async rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <!-- main CSS -->
@@ -15,6 +18,16 @@
 </head>
 
 <body>
+
+    <div class="preloader">
+        <div class="spinner-wrapper">
+            <div class="spinner">
+                <div class="double-bounce1"></div>
+                <div class="double-bounce2"></div>
+            </div>
+        </div>
+    </div>
+
     <!-- top navigation bar menu starts-->
     <header>
         <a href="#landing_page" class="name">Varun Kumar Bansal</a>
@@ -101,7 +114,8 @@
                         </div>
                         <div class="card_back">
                             <h3>Open Source Contributor in Girlscript Winter Of Contributing</h3>
-                            <p>GWOC is a three month long program organised by GirlScript Foundation to create world's largest multilingual content repository</p><br>
+                            <p>GWOC is a three month long program organised by GirlScript Foundation to create world's
+                                largest multilingual content repository</p><br>
                             <a href="https://github.com/VARUN-K-BANSAL/winter-of-contributing" target="_blank">My
                                 Contibutions</a>
                         </div>
@@ -164,7 +178,8 @@
                         </div>
                         <div class="card_back">
                             <h3><br><br>Ninja Entrepreneur at Coding Ninjas</h3>
-                            <p>Ninja Entrepreneur is a 6 month long internship program in which we will the face of coding ninjas in our Institute</p>
+                            <p>Ninja Entrepreneur is a 6 month long internship program in which we will the face of
+                                coding ninjas in our Institute</p>
                         </div>
                     </div>
                 </div>
@@ -177,7 +192,8 @@
                         </div>
                         <div class="card_back">
                             <h3><br>COVID19-India</h3>
-                            <p>Developed a website which shows the current status of COVID-19 in India using API calls</p><br><br>
+                            <p>Developed a website which shows the current status of COVID-19 in India using API calls
+                            </p><br><br>
                             <a href="https://varun-k-bansal.github.io/covid19-India/" target="_blank">Visit Website</a>
                         </div>
                     </div>
@@ -213,6 +229,18 @@
         <p>&copy; 2021, Varun Kumar Bansal, All Rights reserved (under construction)</p>
     </footer>
 
+    <!-- preloader js starts -->
+    <script>
+        $(document).ready(function () {
+            fadeOutTime = 500;
+            function removeLoader() {
+                let preloader = $('.spinner-wrapper');
+                preloader.fadeOut(fadeOutTime);
+            }
+            removeLoader();
+        });
+    </script>
+    <!-- preloader js ends -->
 
     <!-- javascript for Sticky nav bar starts -->
     <script type="text/javascript">
