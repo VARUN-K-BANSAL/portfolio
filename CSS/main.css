@@ -80,15 +80,15 @@ header {
     text-transform: uppercase;
 }
 
-.nav_bar>.li_nav_bar>a {
+.nav_bar .li_nav_bar a {
     transition: 0.4s;
     text-decoration: none;
-    color: var(--light_text);
+    /* color: var(--light_text); */
     display: inline-block;
     margin: 0 15px;
 }
 
-.nav_bar>.li_nav_bar>a:hover {
+.nav_bar .li_nav_bar a:hover {
     background-color: var(--light_background);
     color: var(--dark_text);
     padding: 12px 12px;
@@ -101,11 +101,11 @@ header.sticky {
     box-shadow: 0 5px 10px #000;
 }
 
-header.sticky>.name {
+header.sticky .name {
     color: var(--dark_text);
 }
 
-header.sticky>.nav_bar>.li_nav_bar>a {
+header.sticky .nav_bar .li_nav_bar a {
     color: var(--dark_text);
 }
 
@@ -461,13 +461,15 @@ section {
     }
     header .nav_bar {
         display: none;
+        color: #000;
     }
     header .nav_bar {
         position: fixed;
         display: block;
-        /* background-color: #fff; */
+        background-color: var(--light_background);
+        /* background-color: var(--loading_page); */
         top: 75px;
-        /* left: -100%; */
+        left: -100%;
         padding: 100px 50px;
         width: 100%;
         height: 100vh;
@@ -475,9 +477,10 @@ section {
         border-top: 1px solid --loading_page;
         transition: 0.5s;
     }
-    header .menu.active {
+    header .nav_bar.active {
         position: fixed;
-        background-color: #fff;
+        /* background-color: var(--light_background); */
+        color: var(--dark_text);
         display: block;
         top: 75px;
         left: 0;
@@ -485,6 +488,9 @@ section {
         width: 100%;
         height: 100vh;
         text-align: center;
+    }
+    header .nav_bar.active li {
+        padding: 10px;
     }
     header ul li a {
         font-size: 20px;
@@ -495,5 +501,51 @@ section {
     .toggle {
         width: 40px;
         height: 40px;
+        background-image: url("../Images/menu.png");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 30px;
+        cursor: pointer;
+    }
+    .toggle.active {
+        width: 40px;
+        height: 40px;
+        background-image: url("../Images/close.png");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 25px;
+        cursor: pointer;
+    }
+    header.sticky .toggle {
+        filter: invert(1);
+    }
+    section {
+        padding: 100px 30px;
+    }
+    .profile {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .profile .my_image {
+        margin-left: 0;
+        margin-right: 0;
+        margin-top: 30px;
+    }
+    .skills_row {
+        display: block;
+    }
+    .card_row {
+        display: block;
+        margin: auto;
+    }
+    .card_container {
+        width: 100%;
+    }
+}
+
+@media (min-width: 941px) {
+    .nav_bar .li_nav_bar a {
+        color: var(--light_text);
     }
 }
